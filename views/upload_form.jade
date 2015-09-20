@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  h2 下のフォームにファイルをドロップするとファイルをアップロードできます。
+  style.
+    form { background:#efefef; border:1px dotted #ccc; height:100px; width:100px; }
+    input[type=file] { display:none; }
+  form#upload
+    input(type='file', multiple='multiple', enctype="multipart/form-data" name='upload_files')
